@@ -39,7 +39,7 @@ $white: white;
 
 body,html {
   height: 100%;
-  background-color: $lightGray;
+  background-color: rgb(247, 247, 205);
 }
 
 body {
@@ -50,8 +50,7 @@ h1,h2,h3,h4,h5,h6,body {
 line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: $dark;
-  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  color: rgb(55, 57, 139);
   margin: 0;
 }
 
@@ -120,8 +119,8 @@ h1,h2,h3,h4,h5,h6 {
 
 header.header {
   @include basePadding;
-  border-bottom: 1px solid $gray;
-  background-color: #fff;
+  border-bottom: 5px solid $gray;
+  background-color: rgb(79, 214, 169);
   position: fixed;
   top: 0;
   left: 0;
@@ -129,10 +128,12 @@ header.header {
   z-index: 5;
   div.header__bar.row {
     position: relative;
+    max-width: 950px;
     h1.grid-6 {
-      font-size: 20px;
+      font-size: 35px;
       line-height: 41px;
       float: left;
+      margin-left: 50px;
       a {
         display: block;
       }
@@ -142,9 +143,11 @@ header.header {
       text-align: right;
       a.post {
         @extend .btn;
-        width: 120px;
+     ;
+        color:white;
+        background-color:grey ;
+        border-color: gray;
         display: inline-left;
-        margin-left: 10px;
       }
     }
   }
@@ -154,15 +157,17 @@ header.header {
     position: absolute;
     right: 0;
     span {
-      top: 5px;
+      top: 14px;
+      line-height: 40px;
+      left: 140px;
       display: block;
       float: left;
-      margin-left: 30px;
+      margin-right: 12px;
       width: 150px;
       height: 50px;
       font-size: 1em;
       cursor: pointer;
-      position: relative;
+    
       &:after {
         content: '▼';
         font-size: .7em;
@@ -211,6 +216,10 @@ header.header {
   }
 }
 div.contents.row {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+ 
   h2 {
     @include boxBase(20px 0, 0);
     font-weight: normal;
@@ -218,6 +227,7 @@ div.contents.row {
       font-weight: bold;
       padding-right: 5px;
       font-size: 1.2em;
+      
     }
   }
   .new_user{
@@ -230,8 +240,9 @@ div.contents.row {
     color: #fff;
     background-size: cover;
     background-position: center center;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba($black,0.2);
+  
     &:after {
       content: '';
       position: absolute;
@@ -316,11 +327,13 @@ div.contents.row {
     }
   }
   .success {
-    @include boxBase(20px 0 ,30px);
+    margin:0 auto!important;
+    height: 200px;
     box-shadow: 0 0 10px rgba($black,0.2);
     background-color: $white;
     box-sizing: border-box;
     text-align: center;
+   
     h3 {
       @include baseMargin;
     }
